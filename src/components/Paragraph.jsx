@@ -40,7 +40,7 @@ function Paragraph() {
   console.log(wordsState);
 
   return (
-    <span className="md:mx-24 lg:mx-64 lg:px-10 relative bottom-24 text-lg font-mono">
+    <span className="mx-7 md:mx-24 lg:mx-80 lg:px-10 relative bottom-24 text-lg font-mono">
       {wordsState.map((word, index) => (
         <span
           className={index == currentWordIndex ? "text-white" : "text-gray-500"}
