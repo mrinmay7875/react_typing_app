@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import useStore from "../store";
 
 function Timer() {
-  const [seconds, setSeconds] = useState(15);
+  const [seconds, setSeconds] = useState(60);
 
   const gameCompleted = useStore((state) => state.gameCompleted);
   const setGameCompleted = useStore((state) => state.setGameCompleted);
@@ -28,12 +28,14 @@ function Timer() {
 
   if (gameStarted) {
     return (
-      <div className="absolute top-20 right-10">
-        {!gameCompleted ? (
-          <p>Time remaining: {seconds} seconds</p>
-        ) : (
-          <p>Time's up!</p>
-        )}
+      <div>
+        <p
+          className={`text-lg font-bold font-mono absolute top-24 right-24 ${
+            gameCompleted ? "text-red-600" : "text-green-600"
+          }`}
+        >
+          {gameCompleted ? "Time's up!" : `Time remaining: ${seconds} seconds`}
+        </p>
       </div>
     );
   } else return null;
