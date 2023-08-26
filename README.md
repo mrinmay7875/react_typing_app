@@ -45,6 +45,10 @@ For best experience open this app in Laptop or Desktop screen.
 
 **State Management:** Zustand
 
+## Screenshots
+<img width="987" alt="image" src="https://github.com/mrinmay7875/react_typing_app/assets/33797909/9c6fd6ac-b5cd-41a7-bda7-6b6e2d3790cb">
+
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
