@@ -14,6 +14,8 @@ const InputText = () => {
   const setGameStarted = useStore((state) => state.setGameStarted);
   const gameCompleted = useStore((state) => state.gameCompleted);
   const setGameCompleted = useStore((state) => state.setGameCompleted);
+  const currentTimer = useStore((state) => state.currentTimer);
+  const setCurrentTimer = useStore((state) => state.setCurrentTimer);
 
   function handleUserInput(e) {
     let inputValue = e.target.value;
@@ -27,6 +29,7 @@ const InputText = () => {
       setUserInputState('');
     }
 
+    // User has typed all the words
     if (currentWordIndex === wordsState.length - 2) {
       setGameCompleted(true);
       setUserInputState('');

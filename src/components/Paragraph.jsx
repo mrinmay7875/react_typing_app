@@ -29,7 +29,7 @@ function Paragraph() {
     let finalSentence = '';
     let paragraphLength = 0;
     if (navigator.userAgentData.mobile) {
-      paragraphLength = 4; // for mobile devices
+      paragraphLength = 3; // for mobile devices
     } else {
       paragraphLength = 10; // for desktop devices
     }

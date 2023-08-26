@@ -1,13 +1,13 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
 const useStore = create((set) => {
   return {
-    paragraphState: "some initial",
+    paragraphState: '',
     setParagraphState: (newText) =>
       set((state) => ({ paragraphState: newText })),
-    wordsState: ["intial word"],
+    wordsState: [''],
     setWordsState: (newWords) => set((state) => ({ wordsState: newWords })),
-    userInputState: "",
+    userInputState: '',
     setUserInputState: (text) => set((state) => ({ userInputState: text })),
     currentWordIndex: 0,
     setCurrentWordIndex: (newIndex) =>
@@ -22,6 +22,8 @@ const useStore = create((set) => {
       set((state) => ({ gameCompleted: completed })),
     gameStarted: false,
     setGameStarted: (started) => set((state) => ({ gameStarted: started })),
+    currentTimer: 30,
+    setCurrentTimer: (newTimer) => set((state) => ({ currentTimer: newTimer })),
   };
 });
 
