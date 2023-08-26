@@ -15,8 +15,9 @@ function Result() {
       let timeUsedByUser = 30 - currentTimer;
       let WordPerSecond = totalWordsTyped / timeUsedByUser;
       finalScore = WordPerSecond * 60;
-      return finalScore;
+      return Math.round(finalScore);
     }
+    finalScore = totalWordsTyped * 2;
     return totalWordsTyped * 2;
   }
 
