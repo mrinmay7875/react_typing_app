@@ -29,7 +29,7 @@ function Paragraph() {
     let finalSentence = '';
     let paragraphLength = 0;
     if (navigator.userAgentData.mobile) {
-      paragraphLength = 3; // for mobile devices
+      paragraphLength = 4; // for mobile devices
     } else {
       paragraphLength = 10; // for desktop devices
     }
@@ -45,7 +45,7 @@ function Paragraph() {
   };
 
   return (
-    <span className='mx-7 h-20 overflow-hidden md:mx-24 md:h-full lg:mx-80 lg:px-10 relative bottom-24 text-lg font-mono'>
+    <span className='mx-7 md:mx-24 md:h-full lg:mx-80 lg:px-10 relative bottom-24 text-lg font-mono'>
       {wordsState.map((word, index) => (
         <span
           className={index == currentWordIndex ? 'text-white' : 'text-gray-500'}
