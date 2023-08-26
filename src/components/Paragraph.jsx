@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import useStore from '../store';
 
@@ -16,9 +16,6 @@ function Paragraph() {
   const wordsState = useStore((state) => state.wordsState);
   const setWordsState = useStore((state) => state.setWordsState);
   const currentWordIndex = useStore((state) => state.currentWordIndex);
-  const setCurrentWordIndex = useStore((state) => state.setCurrentWordIndex);
-  const isMobileDevice = useStore((state) => state.isMobileDevice);
-  const setIsMobileDevice = useStore((state) => state.setIsMobileDevice);
 
   // Calling to generate sentence
   useEffect(() => {
