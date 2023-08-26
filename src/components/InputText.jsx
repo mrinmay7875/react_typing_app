@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import useStore from '../store';
 
 const InputText = () => {
@@ -7,10 +6,7 @@ const InputText = () => {
   const currentWordIndex = useStore((state) => state.currentWordIndex);
   const setCurrentWordIndex = useStore((state) => state.setCurrentWordIndex);
   const wordsState = useStore((state) => state.wordsState);
-  const setWordsState = useStore((state) => state.setWordsState);
-  const correctnessState = useStore((state) => state.correctnessState);
   const setCorrectnessState = useStore((state) => state.setCorrectnessState);
-  const gameStarted = useStore((state) => state.gameStarted);
   const setGameStarted = useStore((state) => state.setGameStarted);
   const gameCompleted = useStore((state) => state.gameCompleted);
   const setGameCompleted = useStore((state) => state.setGameCompleted);

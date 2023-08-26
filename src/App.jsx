@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Paragraph from './components/Paragraph';
 import InputText from './components/InputText';
 import Timer from './components/Timer';
