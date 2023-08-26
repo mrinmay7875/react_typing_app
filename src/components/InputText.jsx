@@ -20,12 +20,15 @@ const InputText = () => {
     const inputWithoutSpaces = inputValue.replace(/\s+/g, "");
     setUserInputState(inputWithoutSpaces);
     setGameStarted(true);
-    // console.log("wordsState[currentWordIndexd]", wordsState[currentWordIndex]);
 
     if (inputWithoutSpaces === wordsState[currentWordIndex]) {
       setCorrectnessState(true);
       setCurrentWordIndex(currentWordIndex + 1);
       setUserInputState("");
+    }
+
+    if (currentWordIndex >= wordsState.length - 1) {
+      setGameCompleted(true);
     }
   }
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import useStore from "../store";
 
 function Timer() {
-  const [seconds, setSeconds] = useState(30);
+  const [seconds, setSeconds] = useState(31);
 
   const gameCompleted = useStore((state) => state.gameCompleted);
   const setGameCompleted = useStore((state) => state.setGameCompleted);

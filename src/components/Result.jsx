@@ -9,15 +9,10 @@ function Result() {
 
   if (gameCompleted) {
     return (
-      <div className="result text-center mt-5 absolute bottom-14">
+      <div className="result text-center mt-5">
         <h2 className="font-mono text-2xl font-semibold mb-2">
-          Yours typing speed is{" "}
-          <span className="text-emerald-300">
-            {correctnessState.length * 2}
-          </span>
-        </h2>
-        <h2 className="font-mono text-2xl font-semibold mb-2">
-          words per minute
+          Yours words per minute is{" "}
+          <span className="text-blue-600">{correctnessState.length}</span>
         </h2>
         <h3 className="text-lg text-gray-500">
           Refresh the page to play again!
