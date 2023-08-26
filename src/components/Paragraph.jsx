@@ -17,14 +17,21 @@ function Paragraph() {
   const setWordsState = useStore((state) => state.setWordsState);
   const currentWordIndex = useStore((state) => state.currentWordIndex);
 
-  // calling to generate sentence func
+  // Calling to generate sentence
   useEffect(() => {
     generateSentence();
   }, []);
 
   const generateSentence = () => {
     let finalSentence = '';
-    for (let i = 0; i < 13; i++) {
+    let paragraphLength = 0;
+    if (navigator.userAgentData.mobile) {
+      paragraphLength = 3; // for mobile devices
+    } else {
+      paragraphLength = 10; // for desktop devices
+    }
+
+    for (let i = 0; i < paragraphLength; i++) {
       const sentence = `${getRandomElement(nouns)} ${getRandomElement(
         verbs
       )} ${getRandomElement(adverbs)} ${getRandomElement(adjectives)}`;
@@ -35,7 +42,7 @@ function Paragraph() {
   };
 
   return (
-    <span className='mx-7 md:mx-24 lg:mx-80 lg:px-10 relative bottom-24 text-lg font-mono'>
+    <span className='mx-7 md:mx-24 md:h-full lg:mx-80 lg:px-10 relative bottom-24 text-lg font-mono'>
       {wordsState.map((word, index) => (
         <span
           className={index == currentWordIndex ? 'text-white' : 'text-gray-500'}
