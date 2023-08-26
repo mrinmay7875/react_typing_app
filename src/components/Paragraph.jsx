@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
-
+import wordsData from '../assets/words.json';
 import useStore from '../store';
 
-const nouns = ['cat', 'dog', 'house', 'car', 'tree', 'macbook'];
-const verbs = ['runs', 'jumps', 'football', 'sleeps', 'item'];
-const adjectives = ['happy', 'excited', 'big', 'small', 'colorful'];
-const adverbs = ['quickly', 'fast', 'loudly', 'softly', 'carefully'];
+const { nouns, verbs, adjectives, adverbs } = wordsData;
+
 
 function getRandomElement(array) {
   const randomIndex = Math.floor(Math.random() * array.length);
