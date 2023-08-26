@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import useStore from "../store";
+import React, { useState } from 'react';
+import useStore from '../store';
 
 const InputText = () => {
   const userInputState = useStore((state) => state.userInputState);
@@ -17,14 +17,14 @@ const InputText = () => {
 
   function handleUserInput(e) {
     let inputValue = e.target.value;
-    const inputWithoutSpaces = inputValue.replace(/\s+/g, "");
+    const inputWithoutSpaces = inputValue.replace(/\s+/g, '');
     setUserInputState(inputWithoutSpaces);
     setGameStarted(true);
 
     if (inputWithoutSpaces === wordsState[currentWordIndex]) {
       setCorrectnessState(true);
       setCurrentWordIndex(currentWordIndex + 1);
-      setUserInputState("");
+      setUserInputState('');
     }
 
     if (currentWordIndex >= wordsState.length - 1) {
@@ -33,16 +33,15 @@ const InputText = () => {
   }
 
   return (
-    <div className="p-4">
-      {/* <label className="block text-gray-700 font-semibold mb-2">Enter your text:</label> */}
-      <div className="w-full max-w-md px-4">
+    <div className='p-4'>
+      <div className='w-full max-w-md px-4'>
         <input
           onChange={handleUserInput}
-          type="text"
+          type='text'
           disabled={gameCompleted}
           value={userInputState}
-          className="w-full md:w-96 px-3 py-2 relative bottom-20 border rounded-md focus:ring focus:ring-blue-300"
-          placeholder="Type your text here..."
+          className='w-full md:w-96 px-3 py-2 relative bottom-20 border rounded-md focus:ring focus:ring-blue-300'
+          placeholder='Type your text here...'
         />
       </div>
     </div>
