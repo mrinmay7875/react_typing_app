@@ -27,8 +27,9 @@ const InputText = () => {
       setUserInputState('');
     }
 
-    if (currentWordIndex >= wordsState.length - 1) {
+    if (currentWordIndex === wordsState.length - 2) {
       setGameCompleted(true);
+      setUserInputState('');
     }
   }
 

@@ -10,7 +10,9 @@ function Result() {
       <div className='result text-center mt-5'>
         <h2 className='font-mono text-2xl font-semibold mb-2'>
           Yours typing speed is
-          <span className='text-teal-300'>{` ${correctnessState.length} `}</span>
+          <span className='text-teal-300'>{` ${
+            correctnessState.length * 2
+          } `}</span>
           words per minute
         </h2>
         <h3 className='text-lg text-gray-500'>
