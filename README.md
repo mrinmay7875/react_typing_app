@@ -36,7 +36,7 @@ It will run the project locally on http://localhost:5173/
 ## Features
 
 - Measure typing speed in WPM
-
+For best experience open this app in Laptop or Desktop screen.
 
 
 ## Tech Stack
