@@ -1,8 +1,51 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Typing Speed Test 
 
-Currently, two official plugins are available:
+Using this app users can measure their typing speed. The typing speed is shown in a Word Per Minute.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/mrinmay7875/react_typing_app.git
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+It will run the project locally on http://localhost:5173/
+
+
+## Features
+
+- Measure typing speed in WPM
+
+
+
+## Tech Stack
+
+**Client:** React, TailwindCSS
+
+**State Management:** Zustand
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
