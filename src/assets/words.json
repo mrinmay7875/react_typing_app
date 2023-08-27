@@ -1,0 +1,6 @@
+{
+    "nouns": ["cat", "dog", "house", "car", "tree", "macbook"],
+    "verbs": ["runs", "jumps", "football", "sleeps", "item"],
+    "adjectives": ["happy", "excited", "big", "small", "colorful"],
+    "adverbs": ["quickly", "fast", "loudly", "softly", "carefully"]
+  }
