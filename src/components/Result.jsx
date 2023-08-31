@@ -12,7 +12,7 @@ function Result() {
 
   function calculateScore() {
     if (currentTimer >= 1) {
-      let timeUsedByUser = 30 - currentTimer;
+      let timeUsedByUser = 60 - currentTimer;
       let WordPerSecond = totalWordsTyped / timeUsedByUser;
       finalScore = WordPerSecond * 60;
       return Math.round(finalScore);
