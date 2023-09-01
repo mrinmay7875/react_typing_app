@@ -4,7 +4,6 @@ import useStore from '../store';
 
 const { nouns, verbs, adjectives, adverbs } = wordsData;
 
-
 function getRandomElement(array) {
   const randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
@@ -24,7 +23,7 @@ function Paragraph() {
     let finalSentence = '';
     let paragraphLength = 0;
     if (navigator.userAgentData.mobile) {
-      paragraphLength = 3; // for mobile devices
+      paragraphLength = 5; // for mobile devices
     } else {
       paragraphLength = 10; // for desktop devices
     }
