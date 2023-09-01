@@ -35,7 +35,7 @@ function Timer() {
     return (
       <div>
         <p
-          className={`text-lg font-bold font-mono absolute top-28 right-24 ${
+          className={`bg-zinc-100 text-lg font-bold text-center font-mono absolute w-full top-0 left-0 lg:left-auto lg:top-28 lg:right-24 lg:w-fit lg:bg-transparent py-2  ${
             gameCompleted ? 'text-red-600' : 'text-green-600'
           }`}
         >
