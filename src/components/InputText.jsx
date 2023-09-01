@@ -32,11 +32,17 @@ const InputText = () => {
     }
   }
 
+  function handlePaste(e) {
+    e.preventDefault();
+    return false;
+  }
+
   return (
     <div className='p-4'>
       <div className='w-full max-w-md px-4'>
         <input
           onChange={handleUserInput}
+          onPaste={handlePaste}
           type='text'
           disabled={gameCompleted}
           value={userInputState}

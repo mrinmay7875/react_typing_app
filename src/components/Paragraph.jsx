@@ -38,8 +38,16 @@ function Paragraph() {
     setWordsState(finalSentence.split(' '));
   };
 
+  function handleCopy(e) {
+    e.preventDefault();
+    return false;
+  }
+
   return (
-    <span className='mx-7 md:mx-24 md:h-full lg:mx-80 lg:px-10 relative bottom-24 text-lg font-mono'>
+    <span
+      onCopy={handleCopy}
+      className='mx-7 md:mx-24 md:h-full lg:mx-80 lg:px-10 relative bottom-24 text-lg font-mono'
+    >
       {wordsState.map((word, index) => (
         <span
           className={index == currentWordIndex ? 'text-white' : 'text-gray-500'}
