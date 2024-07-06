@@ -4,11 +4,27 @@ import useStore from '../store';
 
 const { nouns, verbs, adjectives, adverbs } = wordsData;
 
+/**
+ * Returns a random element from the given array.
+ *
+ * @param {Array} array - The array from which to select a random element.
+ * @return {*} - The randomly selected element from the array.
+ */
 function getRandomElement(array) {
   const randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
 }
 
+/**
+ * Renders a paragraph of randomly generated sentences using the words from
+ * the `nouns`, `verbs`, `adverbs`, and `adjectives` arrays. The length of
+ * the paragraph is determined based on the device type. The generated
+ * sentences are displayed one word at a time, with the current word highlighted
+ * in white text on a gray background. The user can copy the entire paragraph by
+ * right-clicking and selecting "Copy".
+ *
+ * @return {JSX.Element} The rendered paragraph component.
+ */
 function Paragraph() {
   const wordsState = useStore((state) => state.wordsState);
   const setWordsState = useStore((state) => state.setWordsState);
