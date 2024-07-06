@@ -1,24 +1,11 @@
 import useStore from '../store';
 
+import CalculateScoreUtil from './../utils/CalculateScoreUtil';
+
 function Result() {
   const gameCompleted = useStore((state) => state.gameCompleted);
-  const correctnessState = useStore((state) => state.correctnessState);
-  const currentTimer = useStore((state) => state.currentTimer);
-  const setCurrentTimer = useStore((state) => state.setCurrentTimer);
 
-  let finalScore = 0;
-  let totalWordsTyped = correctnessState.length;
-
-  function calculateScore() {
-    if (currentTimer >= 1) {
-      let timeUsedByUser = 60 - currentTimer;
-      let WordPerSecond = totalWordsTyped / timeUsedByUser;
-      finalScore = WordPerSecond * 60;
-      return Math.round(finalScore);
-    }
-    finalScore = totalWordsTyped * 2;
-    return totalWordsTyped * 2;
-  }
+  const { calculateScore } = CalculateScoreUtil();
 
   if (gameCompleted) {
     return (
