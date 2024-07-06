@@ -6,7 +6,7 @@ import Result from './components/Result';
 function App() {
   return (
     <div className='flex flex-col items-center justify-center min-h-screen overflow-x-hidden'>
-      <h1 className='text-3xl font-bold relative bottom-36'>
+      <h1 className='text-3xl font-bold relative bottom-32'>
         React Typing App
       </h1>
       <Paragraph />

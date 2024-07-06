@@ -62,7 +62,7 @@ function Paragraph() {
   return (
     <span
       onCopy={handleCopy}
-      className='mx-7 md:mx-24 md:h-full lg:mx-80 lg:px-10 relative bottom-24 text-lg font-mono'
+      className='block p-4 bg-white border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700  mx-7 md:mx-24 md:h-full lg:mx-80 lg:px-10 relative bottom-24 text-lg font-mono'
     >
       {wordsState.map((word, index) => (
         <span
