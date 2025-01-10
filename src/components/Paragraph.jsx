@@ -1,6 +1,8 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import wordsData from '../assets/words.json';
 import useStore from '../store';
+import useDeviceDetection from '../hooks/useDetectDevice';
+import { MobileDevice } from '../constant/constant';
 
 const { nouns, verbs, adjectives, adverbs } = wordsData;
 
@@ -29,6 +31,7 @@ function Paragraph() {
   const wordsState = useStore((state) => state.wordsState);
   const setWordsState = useStore((state) => state.setWordsState);
   const currentWordIndex = useStore((state) => state.currentWordIndex);
+  const deviceType = useDeviceDetection();
 
   // Calling to generate sentence
   useEffect(() => {
@@ -38,7 +41,8 @@ function Paragraph() {
   const generateSentence = () => {
     let finalSentence = '';
     let paragraphLength = 0;
-    if (navigator.userAgentData.mobile) {
+
+    if (deviceType === MobileDevice) {
       paragraphLength = 5; // for mobile devices
     } else {
       paragraphLength = 10; // for desktop devices
