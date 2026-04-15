@@ -33,13 +33,9 @@ function Timer() {
 
   if (gameStarted) {
     return (
-      <div>
-        <p
-          className={`bg-stone-300 text-lg font-bold text-center font-mono absolute w-full top-0 left-0 py-2  ${
-            gameCompleted ? 'text-red-600' : 'text-green-600'
-          }`}
-        >
-          {gameCompleted ? "Time's up!" : `Time remaining: ${seconds} seconds`}
+      <div className='w-full bg-gradient-cyan-purple py-3 px-4 text-center font-mono text-lg font-bold transition-all duration-300 shadow-lg'>
+        <p className={gameCompleted ? 'text-accent-red animate-pulse' : 'text-vibrant-green'}>
+          {gameCompleted ? "⏱️ Time's up!" : `⏱️ Time remaining: ${seconds} seconds`}
         </p>
       </div>
     );
