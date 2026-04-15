@@ -38,18 +38,16 @@ const InputText = () => {
   }
 
   return (
-    <div className='p-4'>
-      <div className='w-full max-w-md px-4'>
-        <input
-          onChange={handleUserInput}
-          onPaste={handlePaste}
-          type='text'
-          disabled={gameCompleted}
-          value={userInputState}
-          className='w-full md:w-96 px-3 py-2 relative bottom-20 border rounded-md focus:ring focus:ring-blue-300'
-          placeholder='Type your text here...'
-        />
-      </div>
+    <div className='w-full max-w-2xl mx-auto px-4'>
+      <input
+        onChange={handleUserInput}
+        onPaste={handlePaste}
+        type='text'
+        disabled={gameCompleted}
+        value={userInputState}
+        className='w-full px-4 py-3 border-2 border-dark-border rounded-lg bg-dark-bg text-dark-text font-mono text-base md:text-lg focus:outline-none focus:border-vibrant-cyan focus:ring-2 focus:ring-vibrant-cyan focus:ring-opacity-50 focus:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed placeholder-dark-secondary text-center'
+        placeholder='Type your text here...'
+      />
     </div>
   );
 };

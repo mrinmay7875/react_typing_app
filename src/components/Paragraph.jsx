@@ -64,19 +64,23 @@ function Paragraph() {
   }
 
   return (
-    <span
+    <div
       onCopy={handleCopy}
-      className='block p-4 bg-white border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700  mx-7 md:mx-24 md:h-full lg:mx-80 lg:px-10 relative bottom-24 text-lg font-mono'
+      className='w-full max-w-2xl mx-auto p-6 md:p-8 bg-dark-bg border-2 border-dark-border rounded-lg shadow-xl hover:border-vibrant-cyan hover:shadow-glow-pulse transition-all duration-300 font-mono text-base md:text-lg leading-relaxed text-center'
     >
       {wordsState.map((word, index) => (
         <span
-          className={index == currentWordIndex ? 'text-white' : 'text-gray-500'}
+          className={
+            index == currentWordIndex
+              ? 'text-vibrant-cyan font-bold bg-gradient-cyan-purple bg-clip-text text-transparent animate-glow-pulse'
+              : 'text-dark-secondary hover:text-vibrant-blue transition-colors duration-150'
+          }
           key={index}
         >
           {`${word} `}
         </span>
       ))}
-    </span>
+    </div>
   );
 }
 
